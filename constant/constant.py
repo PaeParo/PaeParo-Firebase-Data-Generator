@@ -85,12 +85,12 @@ tags = [
 ]
 
 images = [
-    "C:\\Users\\sonki\\Pictures\\view_image_1.jpg",
-    "C:\\Users\\sonki\\Pictures\\view_image_2.jpg",
-    "C:\\Users\\sonki\\Pictures\\view_image_3.jpg",
-    "C:\\Users\\sonki\\Pictures\\view_image_4.jpg",
-    "C:\\Users\\sonki\\Pictures\\view_image_5.jpg",
-    "C:\\Users\\sonki\\Pictures\\view_image_6.png",
+    "..\\images\\view_image_1.jpg",
+    "..\\images\\view_image_2.jpg",
+    "..\\images\\view_image_3.jpg",
+    "..\\images\\view_image_4.jpg",
+    "..\\images\\view_image_5.jpg",
+    "..\\images\\view_image_6.jpg",
 ]
 
 users = [
