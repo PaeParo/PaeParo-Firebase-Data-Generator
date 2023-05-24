@@ -84,14 +84,58 @@ tags = [
     "미술관", "음악페스티벌", "와인투어", "스파", "요가"
 ]
 
-images = [
-    "..\\images\\view_image_1.jpg",
-    "..\\images\\view_image_2.jpg",
-    "..\\images\\view_image_3.jpg",
-    "..\\images\\view_image_4.jpg",
-    "..\\images\\view_image_5.jpg",
-    "..\\images\\view_image_6.jpg",
-]
+images = {
+    "서울시": [
+        ".\\images\\서울_1.jpg",
+        ".\\images\\서울_2.jpg",
+        ".\\images\\서울_3.jpg",
+        ".\\images\\서울_4.jpg",
+        ".\\images\\서울_5.jpg",
+    ],
+    "부산시": [
+        ".\\images\\부산_1.jpg",
+        ".\\images\\부산_2.jpg",
+        ".\\images\\부산_3.jpg",
+        ".\\images\\부산_4.jpg",
+        ".\\images\\부산_5.jpg",
+    ],
+    "춘천시": [
+        ".\\images\\춘천_1.jpg",
+        ".\\images\\춘천_2.jpg",
+        ".\\images\\춘천_3.jpg",
+        ".\\images\\춘천_4.jpg",
+        ".\\images\\춘천_5.jpg",
+    ],
+    "천안시": [
+        ".\\images\\천안_1.jpg",
+        ".\\images\\천안_2.jpg",
+        ".\\images\\천안_3.jpg",
+        ".\\images\\천안_4.jpg",
+        ".\\images\\천안_5.jpg",
+    ],
+    "포항시": [
+        ".\\images\\포항_1.jpg",
+        ".\\images\\포항_2.jpg",
+        ".\\images\\포항_3.jpg",
+        ".\\images\\포항_4.jpg",
+        ".\\images\\포항_5.jpg",
+    ],
+    "제주시": [
+        ".\\images\\제주_1.jpg",
+        ".\\images\\제주_2.jpg",
+        ".\\images\\제주_3.jpg",
+        ".\\images\\제주_4.jpg",
+        ".\\images\\제주_5.jpg",
+    ],
+    "서귀포시": [
+        ".\\images\\서귀포_1.jpg",
+        ".\\images\\서귀포_2.jpg",
+        ".\\images\\서귀포_3.jpg",
+        ".\\images\\서귀포_4.jpg",
+        ".\\images\\서귀포_5.jpg",
+    ]
+}
+
 
 users = [
     "0tMlexzJJxTBo6LyjnDnQyUZS5t1", "Bkwsp5m4xZNH2GmdUFjkicwg5ur1", "NnGXEFk67pYUu6DqlQ4Uu1M48Gr1",
