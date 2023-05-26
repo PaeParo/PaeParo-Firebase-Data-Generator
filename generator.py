@@ -39,8 +39,12 @@ def generate_trip_and_post(regions, titles, users, descriptions, tags, sample_im
     trip['start_date'] = start_date
     trip['end_date'] = end_date
     trip['budget'] = random.randint(100000, 3000000)
-    trip['members'] = random.sample(users, random.randint(1, 2))
-    trip['invitations'] = random.sample([user for user in users if user not in trip['members']], random.randint(1, 2))
+    trip['members'] = random.sample(users, random.randint(1, 4))
+    if trip['status'] == 'PLANNING':
+        trip['invitations'] = random.sample([user for user in users if user not in trip['members']],
+                                            random.randint(1, 2))
+    else:
+        trip['invitations'] = []
 
     trip_ref = db.collection('trips').document()
     trip['trip_id'] = trip_ref.id
@@ -57,7 +61,7 @@ def generate_trip_and_post(regions, titles, users, descriptions, tags, sample_im
         post['likes'] = random.randint(1, 1000)
         post['tags'] = random.sample(tags, 5)
         post['images'] = [upload_image_to_firebase(post['user_id'], trip['trip_id'], img) for img in
-                          random.sample(sample_images[trip['region']], 2)]
+                          random.sample(sample_images[trip['region']], 4)]
 
         post_ref = db.collection('posts').document()
         post['post_id'] = post_ref.id
