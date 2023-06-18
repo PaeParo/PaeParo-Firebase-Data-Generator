@@ -136,6 +136,15 @@ images = {
     ]
 }
 
+latlong = {
+    "서울": {"lat": 37.5665, "lon": 126.9780},
+    "부산": {"lat": 35.1796, "lon": 129.0756},
+    "춘천": {"lat": 37.8803, "lon": 127.7298},
+    "천안": {"lat": 36.8151, "lon": 127.1139},
+    "포항": {"lat": 36.0192, "lon": 129.3435},
+    "제주": {"lat": 33.4996, "lon": 126.5312},
+    "서귀포": {"lat": 33.2541, "lon": 126.5601}
+}
 
 users = [
     "0tMlexzJJxTBo6LyjnDnQyUZS5t1", "Bkwsp5m4xZNH2GmdUFjkicwg5ur1", "NnGXEFk67pYUu6DqlQ4Uu1M48Gr1",

@@ -29,9 +29,12 @@ def upload_image_to_firebase(user_id, post_id, image_path):
     return blob.public_url
 
 
-def generate_trip_and_post(regions, titles, users, descriptions, tags, sample_images):
+def generate_trip_and_post(regions, latlong, titles, users, descriptions, tags, sample_images):
     trip = {}
     trip['region'] = random.choice(regions)
+    trip['latitude'] = latlong[trip['region']]['lat']
+    trip['longitude'] = latlong[trip['region']]['lon']
+    trip['transportation'] = random.choice(["자가용", "대중교통"])
     trip['name'] = random.choice(titles[trip['region']])
     trip['status'] = random.choice(["PLANNING", "ONGOING", "FINISHED"])
     start_date = random_date(datetime(2023, 4, 1), datetime(2023, 10, 31))
@@ -72,8 +75,8 @@ def generate_trip_and_post(regions, titles, users, descriptions, tags, sample_im
     return trip, None
 
 
-for _ in range(20):
-    trip, post = generate_trip_and_post(constant.regions, constant.titles, constant.users, constant.descriptions,
+for _ in range(80):
+    trip, post = generate_trip_and_post(constant.regions, constant.latlong, constant.titles, constant.users, constant.descriptions,
                                         constant.tags, constant.images)
     print(trip)
     if post:
