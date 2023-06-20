@@ -50,12 +50,11 @@ def generate_trip_and_post(regions, latlong, titles, users, descriptions, tags, 
         trip['invitations'] = []
 
     trip_ref = db.collection('trips').document()
-    trip['trip_id'] = trip_ref.id
     trip_ref.set(trip)
 
     if trip['status'] == 'FINISHED':
         post = {}
-        post['trip_id'] = trip['trip_id']
+        post['trip_id'] = trip_ref.id
         post['user_id'] = trip['members'][0]
         post['region'] = trip['region']
         post['title'] = trip['name']
@@ -63,7 +62,7 @@ def generate_trip_and_post(regions, latlong, titles, users, descriptions, tags, 
         post['created_at'] = end_date + timedelta(hours=random.randint(18, 23))
         post['likes'] = random.randint(1, 1000)
         post['tags'] = random.sample(tags, 5)
-        post['images'] = [upload_image_to_firebase(post['user_id'], trip['trip_id'], img) for img in
+        post['images'] = [upload_image_to_firebase(post['user_id'], trip_ref.id, img) for img in
                           random.sample(sample_images[trip['region']], 4)]
 
         post_ref = db.collection('posts').document()
