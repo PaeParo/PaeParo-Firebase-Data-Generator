@@ -66,7 +66,6 @@ def generate_trip_and_post(regions, latlong, titles, users, descriptions, tags, 
                           random.sample(sample_images[trip['region']], 4)]
 
         post_ref = db.collection('posts').document()
-        post['post_id'] = post_ref.id
         post_ref.set(post)
 
         return trip, post
